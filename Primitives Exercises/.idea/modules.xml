@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BooleanPractice/BooleanPractice.iml" filepath="$PROJECT_DIR$/BooleanPractice/BooleanPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DatatypePractice/DatatypePractice.iml" filepath="$PROJECT_DIR$/DatatypePractice/DatatypePractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Primitives Exercises.iml" filepath="$PROJECT_DIR$/Primitives Exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handwrittenCodePractice/handwrittenCodePractice.iml" filepath="$PROJECT_DIR$/handwrittenCodePractice/handwrittenCodePractice.iml" />
+    </modules>
+  </component>
+</project>
