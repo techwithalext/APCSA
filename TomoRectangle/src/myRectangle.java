@@ -1,4 +1,4 @@
-public class myRectangle {
+public class  myRectangle {
     //instance variables
     private int length;
     private int width;
