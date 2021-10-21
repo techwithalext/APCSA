@@ -15,25 +15,25 @@ public class Book {
         Instead of selecting ratings, use Math.random to assign random ratings to books (still between 0 and 5)
     REQUIRED FOR EXCEEDS EXPECTATIONS
         All the stuff above, plus:
-        Using ONLY the addRatings method (it’s okay if the ratings randomize again
-            - I just want you to get comfortable using dot.notation) you created in your Book program/class
-            and the String methods substring and length, calculate and print the following data about your book objects:
-        The total pages in all of your books combined
-        The total number of characters (letters, symbols, and spaces) in all the book titles combined
-        The first letter of each author's name, concatenated together
-        The last letter of each book's title, concatenated together
-        The average rating of all the books' average ratings
+        Calculate and print the following data about your book objects:
+                - The total pages in all of your books combined
+                - The total number of characters (letters, symbols, and spaces) in all the book titles combined
+                - The first letter of each author's name, concatenated together
+                - The last letter of each book's title, concatenated together
+                - The average rating of all the books' average ratings
+                    - Using ONLY the addRatings method (it’s okay if the ratings randomize again I just want you to get comfortable using dot.notation)
+                      you created in your Book program/class and the String methods substring and length
         Comment your new code
         Ensure your output is neatly formatted
 
 
      */
 
-    private String bookTitle;
-    private String author;
-    private String genre;
-    private int totalPages;
-    private int ratingStars;
+    public String bookTitle;
+    public String author;
+    public String genre;
+    public int totalPages;
+    public int ratingStars;
 
     public Book(){
 
@@ -55,6 +55,7 @@ public class Book {
 
     }
 
+    //Non-static because it makes random ratings for each object
     public int getRating(){
         return (int)(Math.random()*5) + 1;
     }
