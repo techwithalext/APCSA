@@ -5,7 +5,7 @@ public class Book {
             (things you might want to initialize in your constructor include book title, author, genre, pages, etc. - you decide!)
             - forcing to use overloaded constructor to get used to concept
         Create a class Main in which you house your main method.
-        Create at least 4 different book objects, 2 using each constructor
+        Crdeate at least 4 different book objects, 2 using each constructor
         Give each book at least 3 ratings using an addRatings method (ratings should be between 0 and 5 stars).
             - Meaning you have to create that addRatings method yourself!
         Print out all the information for each book in a neatly formatted manner
@@ -25,19 +25,17 @@ public class Book {
                       you created in your Book program/class and the String methods substring and length
         Comment your new code
         Ensure your output is neatly formatted
-
-
      */
 
+    //declaring variables
     public String bookTitle;
     public String author;
     public String genre;
     public int totalPages;
     public int ratingStars;
 
-    public Book(){
 
-    }
+    //first constructor with the genre included
     public Book(String theBookTitle, String theAuthor, int theTotalPages){
 
         bookTitle = theBookTitle;
@@ -46,6 +44,7 @@ public class Book {
 
     }
 
+    //second constructor with the genre included
     public Book(String theBookTitle, String theAuthor, String theGenre, int theTotalPages){
 
         bookTitle = theBookTitle;
@@ -56,8 +55,8 @@ public class Book {
     }
 
     //Non-static because it makes random ratings for each object
-    public int getRating(){
-        return (int)(Math.random()*5) + 1;
-    }
+        public int addRating(){
+            return (int)(Math.random()*6);
+        }
 
 }
