@@ -5,7 +5,7 @@ public class Book {
             (things you might want to initialize in your constructor include book title, author, genre, pages, etc. - you decide!)
             - forcing to use overloaded constructor to get used to concept
         Create a class Main in which you house your main method.
-        Crdeate at least 4 different book objects, 2 using each constructor
+        Create at least 4 different book objects, 2 using each constructor
         Give each book at least 3 ratings using an addRatings method (ratings should be between 0 and 5 stars).
             - Meaning you have to create that addRatings method yourself!
         Print out all the information for each book in a neatly formatted manner
@@ -28,11 +28,11 @@ public class Book {
      */
 
     //declaring variables
-    public String bookTitle;
-    public String author;
-    public String genre;
-    public int totalPages;
-    public int ratingStars;
+    private String bookTitle;
+    private String author;
+    private String genre;
+    private int totalPages;
+    private int ratingStars;
 
 
     //first constructor with the genre included
@@ -54,9 +54,57 @@ public class Book {
 
     }
 
-    //Non-static because it makes random ratings for each object
-        public int addRating(){
+        public static int addRating(){
             return (int)(Math.random()*6);
         }
+
+        //Getter
+    public String getBookTitle(){
+        return bookTitle;
+    }
+    //Setter
+    public void setBookTitle(String newBookTitle){
+        bookTitle = newBookTitle;
+    }
+
+    //Getter
+    public String getAuthor(){
+        return author;
+    }
+    //Setter
+    public void setAuthor(String newAuthor){
+        author = newAuthor;
+    }
+
+    //Getter
+    public String getGenre(){
+        return genre;
+    }
+    //Setter
+    public void setGenre(String newGenre){
+        genre = newGenre;
+    }
+
+    //Getter
+    public int getTotalPages(){
+        return totalPages;
+    }
+    //Setter
+    public void setTotalPages(int newTotalPages){
+        totalPages = newTotalPages;
+    }
+
+    //Getter
+    public int ratingStars(){
+        return ratingStars;
+    }
+    //Setter
+    public void setRatingStars(int newRatingStars){
+        ratingStars = newRatingStars;
+    }
+
+
+
+
 
 }
