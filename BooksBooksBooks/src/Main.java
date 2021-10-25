@@ -23,7 +23,7 @@ public class Main {
         //creating the integer array with 3 ratings for each book
         int[] ratings = new int[12];
         for(int i = 0; i < 12; i++){
-            ratings[i] = (int)(Math.random()*6);
+            ratings[i] = Book.addRating();
         }
         //double array with the average rating for all books
         double[] ratingAverages = {((ratings[0] + ratings[1] + ratings[2])/3.0), ((ratings[3] + ratings[4] + ratings[5])/3.0), ((ratings[6] + ratings[7] + ratings[8])/3.0), ((ratings[9] + ratings[10] + ratings[11])/3.0)};
