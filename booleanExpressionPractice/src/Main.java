@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 public class Main {
     public static int max1(int x, int y, int z){
         return Math.max(z,(Math.max(x, y)));
@@ -44,13 +49,9 @@ public class Main {
         if(random == 7){
             return "Don't count on it.";
         }
-        if(random == 8){
+        else{
             return "My reply is no.";
         }
-
-        return "oops";
-
-
     }
 
     public static void main(String[] args){
@@ -60,5 +61,13 @@ public class Main {
         System.out.println(perfectSquare(5));
         System.out.println(EightBall());
 
+        JFrame frame = new JFrame(); //creates the new frame object
+        ImageIcon icon = new ImageIcon ("gmail.png"); //creates the image object
+        frame.add(new JLabel(icon)); //creates the label to put the picture
+        frame.pack(); //sets the image to its preferred dimensions
+        //make the frame appear on the screen
+        //if you don't set setVisible to true, the frame
+        //object will exist as an object in memory
+        //and the picture won't actually appear on the screen
     }
 }
