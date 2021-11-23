@@ -1,16 +1,14 @@
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class TextAdventure 
-{
+public class TextAdventure {
   //Instance variables of a class can also be objects
   FancyConsole console;
   Scanner inScanner;
   Player ourHero;
-  int moneyLost = (int)(Math.random()*1000) + 100;
+  int moneyLost = (int)(Math.random() * 1000) + 100;
 
-  public TextAdventure()
-  {
+  public TextAdventure() {
     //This creates the UI console that the user
     //can type in
     console = new FancyConsole("Great Text Adventure!", 1000, 1000);
@@ -36,18 +34,19 @@ public class TextAdventure
     ourHero.changeName(input);
     serverDesktop();
   }
-  public void serverDesktop(){
+  public void serverDesktop() {
     String input;
     console.setImage("bsod.jpg");
     // describe the starting situation. Feel free to change this as well
     System.out.println("\n" + ourHero.getName() + " wakes up with $" + ourHero.getMoney() + " to a broken Windows installation due to an automatic update.");
     System.out.println("You are extremely frustrated because you just lost all of your work for the day, which caused you to loose $" + moneyLost + ".");
-    //taking away the money you lost
-    ourHero.setMoney(ourHero.getMoney() - moneyLost);
     System.out.println("This frustration caused you to switch to Linux because you are sick of Windows, and you want more control.");
     System.out.println("Lets ask a few questions to find the best distro for you.");
     System.out.println("Is this for desktop or server use?");
     System.out.println("\n - 1). Desktop \n - 2). Server\n(1/2): ");
+
+    //taking away the money you lost
+    ourHero.setMoney(ourHero.getMoney() - moneyLost);
 
     // get user input and go to the appropriate zone based on their input
     // ADD CODE HERE
@@ -58,8 +57,7 @@ public class TextAdventure
     else serverDesktop();
   }
 
-  private void desktopExperience()
-  {
+  private void desktopExperience() {
     String input;
     // change image
     console.setImage("desktopExperience.jpg");
@@ -78,8 +76,7 @@ public class TextAdventure
     else desktopExperience();
   }
 
-  private void serverExperience()
-  {
+  private void serverExperience() {
     String input;
     // change image
     console.setImage("serverExperience.jpg");
@@ -100,8 +97,7 @@ public class TextAdventure
 
   }
 
-  private void desktopNewbie()
-  {
+  private void desktopNewbie() {
     String input;
     // change image
     console.setImage("desktopNewbie.jpg");
@@ -118,11 +114,10 @@ public class TextAdventure
     if (input.equals("1")) macDE();
     else if (input.equals("2")) windowsDE();
     else desktopNewbie();
-    
+
   }
 
-  private void desktopModerate()
-  {
+  private void desktopModerate() {
     String input;
     // change image
     console.setImage("desktopModerate.png");
@@ -144,8 +139,7 @@ public class TextAdventure
     else desktopModerate();
   }
 
-  private void desktopExpert()
-  {
+  private void desktopExpert() {
     String input;
     // change image
     console.setImage("desktopExpert.png");
@@ -163,16 +157,15 @@ public class TextAdventure
     else desktopExpert();
   }
 
-  private void serverNewbie()
-  {
+  private void serverNewbie() {
     // change image
     console.setImage("serverNewbie.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Raspbian Lite\nb). Ubuntu Server\nc).Debian");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void serverModerate()
-  {
+  private void serverModerate() {
     String input;
     // change image
     console.setImage("serverModerate.jpg");
@@ -189,8 +182,7 @@ public class TextAdventure
     else if (input.equals("2")) serverPaid();
     else serverModerate();
   }
-  private void serverExpert()
-  {
+  private void serverExpert() {
     String input;
     // change image
     console.setImage("serverExpert.jpg");
@@ -207,108 +199,121 @@ public class TextAdventure
     else if (input.equals("2")) serverEnterprise();
     else serverExpert();
   }
-  private void macDE(){
+  private void macDE() {
     // change image
     console.setImage("macDE.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Pop_OS!\nb). Ubuntu\nc). Fedora Workstation");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
 
-  private void windowsDE(){
+  private void windowsDE() {
     // change image
     console.setImage("windowsDE.jpg");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Kubuntu\nb). Linux Mint\nc). Fedora KDE\nd). Raspbian\ne). Xubuntu");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
 
-  private void typicalUsage(){
+  private void typicalUsage() {
     // change image
     console.setImage("typicalUsage.jpg");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Fedora Workstation\nb). Manjaro\nc). Pop_OS!\nd). Ubuntu");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void multimediaProduction(){
+  private void multimediaProduction() {
     // change image
     console.setImage("multimediaProduction.jpg");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Ubuntu Studio\nb). AV Linux\nc). Dream Studio\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void mediaCenter(){
+  private void mediaCenter() {
     // change image
     console.setImage("mediaCenter.jpg");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Ubuntu\nb). OSMC\nc). OpenELEC\nd). RetroPie");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void cloudOS(){
+  private void cloudOS() {
     // change image
     console.setImage("cloudOS.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Chromium OS\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void securityHacking(){
+  private void securityHacking() {
     // change image
     console.setImage("securityHacking.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Kali Linux\nb). Tails\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void development(){
+  private void development() {
     // change image
     console.setImage("development.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Arch Linux\nb). Manjaro\nc). Fedora Workstation\nd). Pop_OS!\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void bleedingEdge(){
+  private void bleedingEdge() {
     // change image
     console.setImage("bleedingEdge.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Arch Linux\nb). Manjaro\nc). Gentoo (if you hate yourself)\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void stable(){
+  private void stable() {
     // change image
     console.setImage("stable.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Manjaro (stable release)\nb). Fedora Workstation\nc). Debian\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void serverFree(){
+  private void serverFree() {
     // change image
     console.setImage("serverFree.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Ubuntu Server\nb). Fedora Server\nc). Debian\nd). Alpine Linux\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void serverPaid(){
+  private void serverPaid() {
     // change image
     console.setImage("serverPaid.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Red Hat Enterprise Linux\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void serverSMB(){
+  private void serverSMB() {
     // change image
     console.setImage("serverSMB.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Ubuntu Server\nb). Debian\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void serverEnterprise(){
+  private void serverEnterprise() {
     // change image
     console.setImage("serverEnterprise.png");
     System.out.println("\nThese distros seem like a great choice for you!");
     System.out.println("a). Red Hat Enterprise Linux\nb). Ubuntu Server\nc). Fedora Server\nd). openSUSE\n");
+    //brings you to the zone for the end of the game, because this is the final result of the distro selection
     gameEnd();
   }
-  private void gameEnd()
-  {
+  private void gameEnd() {
     try {
       Thread.sleep(10000);
     } catch (InterruptedException e) {
@@ -329,7 +334,7 @@ public class TextAdventure
     else gameEnd();
     inScanner.close();
   }
-  private void casino(){
+  private void casino() {
     String input;
     console.setImage("gamble.jpg");
     System.out.println("Welcome to the Linux Casino!\n Would you like to gamble?");
@@ -340,29 +345,42 @@ public class TextAdventure
     else if (input.equals("no") || input.equals("n") || input.equals("2")) gameEnd();
     else casino();
   }
-  private void gamble(){
+  private void gamble() {
     //if you didn't lose the minimum amount of money at the start, you gamble the normal amount
-    if (ourHero.getMoney() != ourHero.getMoney() - 100){
-      int moneyGambled = (int)(Math.random()*(5000-0+1)+0);
-      int loseOrGain = (int)(Math.random()*(1-0+1)+0);
-      if (loseOrGain == 0){
+    if (ourHero.getMoney() != ourHero.getMoney() - 100) {
+
+      // generates the amount of money "on the line"
+      int moneyGambled = (int)(Math.random() * (5000 - 0 + 1) + 0);
+
+      // "flips a coin" to decide if you should win or loose money
+      int loseOrGain = (int)(Math.random() * (1 - 0 + 1) + 0);
+
+      //if you win money, it gives you the money and prints how much you won
+      if (loseOrGain == 0) {
         ourHero.setMoney(ourHero.getMoney() + moneyGambled);
         System.out.println("You won $" + moneyGambled + "!");
       }
-      if (loseOrGain != 0){
+
+      //if you loose money, it takes the money and prints how much you lost
+      if (loseOrGain != 0) {
         ourHero.setMoney(ourHero.getMoney() - moneyGambled);
         System.out.println("You lost $" + moneyGambled + ". :(");
       }
     }
     //if you lost the minimum amount of money at the start you lose all of your money because you were too lucky
-    else if (ourHero.getMoney() == ourHero.getMoney() - 100){
-      ourHero.setMoney(ourHero.getMoney()/2);
+    else if (ourHero.getMoney() == ourHero.getMoney() - 100) {
+      ourHero.setMoney(ourHero.getMoney() / 2);
       System.out.println("You lost half of your money, because you were too lucky and lost the minimum amount of money at the start.");
     }
+
+    //prints how much money you have left after the gambling fiasco
     System.out.println("You now have $" + ourHero.getMoney());
+
+    //returns to the gameEnd zone
     gameEnd();
   }
-  private void quit(){
+  private void quit() {
+    //quits the program
     System.exit(0);
   }
 }
