@@ -10,7 +10,7 @@ import javax.swing.event.CaretListener;
 
 public class FancyConsole extends JFrame 
 {
-
+//setting variables
   int guiWidth;
   int guiHeight;
 	JTextField tfIn;
@@ -47,7 +47,7 @@ public class FancyConsole extends JFrame
 	    }
 
       consoleText = "";
-	    
+	    //creating new panel
 	    JPanel panel = new JPanel(new BorderLayout());
       taOut = new JTextArea(20, 40);
       scrollPane = new JScrollPane(taOut);
@@ -115,6 +115,7 @@ public class FancyConsole extends JFrame
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);
+        //sets size of the jframe
 		setSize(guiWidth, guiHeight);
 		
 	    new SwingWorker<Void, String>() 
@@ -146,6 +147,7 @@ public class FancyConsole extends JFrame
 
   public void setImage(String newImage)
   {
+      //takes the new image from when you call FancyConsole.setImage and sets it
       ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(newImage));
       Image img = imageIcon.getImage();
       Image scaledImg = img.getScaledInstance(guiWidth,-1,java.awt.Image.SCALE_SMOOTH);
