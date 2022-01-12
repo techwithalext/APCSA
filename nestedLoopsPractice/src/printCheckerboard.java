@@ -1,22 +1,24 @@
 public class printCheckerboard {
-    /*
-    Write and test a method printCheckerboard(int n) that
-    displays a checkerboard pattern with n rows and n columns.
-    For example, printCheckerboard(6) should display:
-        #o#o#o
-        o#o#o#
-        #o#o#o
-        o#o#o#
-        #o#o#o
-        o#o#o#
-     */
-    public static void printCheckerboard(int n){
+    public static void printCheckerboard(int row, int col) {
 
-        for(int i = 0; i <= n; i++){
-            for(int j = )
+        int y = col;
+
+        while (row <= 8) {
+
+            while (y <= 8) {
+                if ((row % 2) == (y % 2))
+                    System.out.print("#");
+                else
+                    System.out.print("o");
+                y++;
+            }
+            row++;
+            y = col;
+            System.out.println();
         }
+    }
 
-
-
+    public static void main(String[] args) {
+        printCheckerboard(4, 5);
     }
 }
