@@ -1,9 +1,11 @@
 public class MagicSquare{
 
     private int[][] square;
+    int n;
 
     public MagicSquare(int[][] square){
-        square = this.square;
+        this.square=square;
+        n = square.length;
     }
 
     public int rowSum(int row){
