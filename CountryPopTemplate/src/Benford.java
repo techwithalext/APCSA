@@ -7,26 +7,29 @@ import java.util.Arrays;
 
 public class Benford {
 
-     //Method to return the first digit of the given number
+    //Method to return the first digit of the given number
     public static int firstDigit(int n){
-        while (n >= 10)
-            n /= 10;
-
+        while(n >= 10){
+            n = n/10;
+        }
         return n;
     }
 
     //Reads integers from input, computing an array of counts
     //for the occurrences of each leading digit (0 - 9)
     public static int[] countDigits(Scanner input){
-        = Integer.valueOf(input);
-
+        int[] count = new int[10];
+        while(input.hasNextInt()){
+            count[firstDigit(input.nextInt())]++;
+        }
+        return count;
     }
 
     //Returns the sum of the integers in the given array
     public static int sum(int[] data){
         int sum = 0;
-        for(int i = 0; i < data.length; i++){
-            sum += data[i];
+        for(int i : data){
+            sum += i;
         }
         return sum;
     }
@@ -34,8 +37,9 @@ public class Benford {
 
     //Reports percentages for each leading digit, excluding zeros
     public static void reportResults(int[] count){
-        
+        int total = sum(count);
+        for(int i = 1; i <= 9; i++){
+            System.out.println(i + " = " + (double)(count[i]*100)/total + "%");
+        }
     }
-
-    
 }

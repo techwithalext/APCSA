@@ -28,6 +28,6 @@ class Main {
     //calling the reportResults method we created on our array of counts
     System.out.println();
 
-        //Benford.reportResults(count);
+    Benford.reportResults(count);
       }
   }
